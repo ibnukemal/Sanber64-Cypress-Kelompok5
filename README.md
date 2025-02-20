@@ -2,6 +2,6 @@
 Kelompok 5 
 Ibnu Kemal (https://github.com/ibnukemal)
 Yogi
-Arta Hutapea
+Arta Hutapea (https://github.com/ArtaHutapea19)
 Evriansyah Fadly
 Rizky Wira Pranata
