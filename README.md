@@ -3,5 +3,5 @@ Kelompok 5
 Ibnu Kemal (https://github.com/ibnukemal)
 Yogi
 Arta Hutapea (https://github.com/ArtaHutapea19)
-Evriansyah Fadly
+Erviansyah Fadly
 Rizky Wira Pranata
