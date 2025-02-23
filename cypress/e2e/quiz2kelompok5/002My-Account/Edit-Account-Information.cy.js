@@ -1,11 +1,13 @@
+import editAccountInformationPage from "../../../support/page-objects/editAccountInformationPage"
+
 describe('My Accout > Edit Account Informstion', () => {
     it('Edit Account Information successfully', () => {
-        cy.visit('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')
+        cy.visit('')
         cy.get('#email').type('halotester1@mail.com')
         cy.get('#pass').type('Halo12345$')
         cy.get('#send2').click()
-        cy.get('[aria-label="store logo"]').should('be.visible')
-        cy.get('[data-ui-id="page-title-wrapper"]').should('have.text', 'Home Page')
+        cy.get(editAccountInformationPage.logo).should('be.visible')
+        cy.get(editAccountInformationPage.see_homepage).should('have.text', 'Home Page')
         cy.get(':nth-child(2) > .customer-welcome > .customer-name > .action').click()
         cy.get(':nth-child(2) > .customer-welcome > .customer-menu > .header > :nth-child(1) > a').click()
         cy.get('.block-dashboard-info > .block-content > .box > .box-actions > .edit > span').click()
@@ -17,12 +19,12 @@ describe('My Accout > Edit Account Informstion', () => {
     })
 
     it('Edit Account Information by Entering Blank Data', () => {
-        cy.visit('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')
+        cy.visit('')
         cy.get('#email').type('halotester1@mail.com')
         cy.get('#pass').type('Halo12345$')
         cy.get('#send2').click()
-        cy.get('[aria-label="store logo"]').should('be.visible')
-        cy.get('[data-ui-id="page-title-wrapper"]').should('have.text', 'Home Page')
+        cy.get(editAccountInformationPage.logo).should('be.visible')
+        cy.get(editAccountInformationPage.see_homepage).should('have.text', 'Home Page')
         cy.get(':nth-child(2) > .customer-welcome > .customer-name > .action').click()
         cy.get(':nth-child(2) > .customer-welcome > .customer-menu > .header > :nth-child(1) > a').click()
         cy.get('.block-dashboard-info > .block-content > .box > .box-actions > .edit > span').click()
@@ -34,12 +36,12 @@ describe('My Accout > Edit Account Informstion', () => {
     })
 
     it('Edit Account Information only Fill in the First Name', () => {
-        cy.visit('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')
+        cy.visit('')
         cy.get('#email').type('halotester1@mail.com')
         cy.get('#pass').type('Halo12345$')
         cy.get('#send2').click()
-        cy.get('[aria-label="store logo"]').should('be.visible')
-        cy.get('[data-ui-id="page-title-wrapper"]').should('have.text', 'Home Page')
+        cy.get(editAccountInformationPage.logo).should('be.visible')
+        cy.get(editAccountInformationPage.see_homepage).should('have.text', 'Home Page')
         cy.get(':nth-child(2) > .customer-welcome > .customer-name > .action').click()
         cy.get(':nth-child(2) > .customer-welcome > .customer-menu > .header > :nth-child(1) > a').click()
         cy.get('.block-dashboard-info > .block-content > .box > .box-actions > .edit > span').click()
@@ -49,13 +51,13 @@ describe('My Accout > Edit Account Informstion', () => {
         cy.get('#lastname-error').should('have.text', 'This is a required field.')
     })
 
-    it.only('Edit Account Information only Fill in the Last Name', () => {
-        cy.visit('https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/')
+    it('Edit Account Information only Fill in the Last Name', () => {
+        cy.visit('')
         cy.get('#email').type('halotester1@mail.com')
         cy.get('#pass').type('Halo12345$')
         cy.get('#send2').click()
-        cy.get('[aria-label="store logo"]').should('be.visible')
-        cy.get('[data-ui-id="page-title-wrapper"]').should('have.text', 'Home Page')
+        cy.get(editAccountInformationPage.logo).should('be.visible')
+        cy.get(editAccountInformationPage.see_homepage).should('have.text', 'Home Page')
         cy.get(':nth-child(2) > .customer-welcome > .customer-name > .action').click()
         cy.get(':nth-child(2) > .customer-welcome > .customer-menu > .header > :nth-child(1) > a').click()
         cy.get('.block-dashboard-info > .block-content > .box > .box-actions > .edit > span').click()
