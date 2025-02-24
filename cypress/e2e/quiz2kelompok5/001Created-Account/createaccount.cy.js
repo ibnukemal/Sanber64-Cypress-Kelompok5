@@ -95,7 +95,7 @@ describe('Create an Account', () => {
     cy.get('.message-error > div').should('be.visible')
     cy.get('.message-error > div').should('contain.text','There is already an account with this email address. If you are sure that it is your email address, click here to get your password and access your account.')     
   })
-    it.('Create an an account succeeded', () => {
+    it('Create an an account succeeded', () => {
     cy.get('.panel > .header > :nth-child(3) > a').click()
     cy.get('#firstname').type('Haloo ')
     cy.get('#lastname').type('Tester 4')
