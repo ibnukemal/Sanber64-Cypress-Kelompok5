@@ -20,8 +20,8 @@ describe('My Accout > Edit Account Informstion', () => {
         cy.get('#form-validate > .actions-toolbar > div.primary > .action > span').click()
         cy.get('.message-success > div').should('have.text', 'You saved the address.')
         
-
     })
+    
 
     it('Edit Address Entering Blank Data', () => {
         cy.visit('')
