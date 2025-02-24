@@ -39,7 +39,3 @@ describe('Verfy product women add to cart functionality', () => {
   })
   
 })
-
-      //cy.get('#ui-id-3').click()
-      //cy.get('.categories-menu > :nth-child(2) > :nth-child(1) > a').click()
-      //cy.get('.wrapper > .products > :nth-child(1)').click()

@@ -98,8 +98,8 @@ describe('Create an Account', () => {
     it('Create an an account succeeded', () => {
     cy.get('.panel > .header > :nth-child(3) > a').click()
     cy.get('#firstname').type('Haloo ')
-    cy.get('#lastname').type('Tester 3')
-    cy.get('#email_address').type('halotester3@mail.com')
+    cy.get('#lastname').type('Tester 4')
+    cy.get('#email_address').type('halotester4@mail.com')
     cy.get('#password').type('Halo12345$')
     cy.get('#password-confirmation').type('Halo12345$')
     cy.get('#form-validate > .actions-toolbar > div.primary > .action > span').click()
