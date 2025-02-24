@@ -28,7 +28,6 @@ describe('My Accout > Edit Account Informstion', () => {
         cy.get('#email').type('halotester1@mail.com')
         cy.get('#pass').type('Halo12345$')
         cy.get('#send2').click()
-
         cy.get(editAccountInformationPage.logo).should('be.visible')
         cy.get(editAccountInformationPage.see_homepage).should('have.text', 'Home Page')
         cy.get(':nth-child(2) > .customer-welcome > .customer-name > .action').click()
