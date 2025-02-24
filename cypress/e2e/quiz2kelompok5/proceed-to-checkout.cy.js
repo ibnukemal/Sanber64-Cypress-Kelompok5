@@ -1,0 +1,45 @@
+describe('go to checkout page', () => {
+
+  it('ontheway checkout page', () => {
+    cy.visit('')
+    cy.get('#email').type('halotester1@mail.com')
+    cy.get('#pass').type('Halo12345$')
+    cy.get('#send2').click()
+    cy.get('.logo > img').should('be.visible')
+    cy.get('.base').should('have.text','Home Page')
+    cy.get('.showcart').click()
+    cy.get('#top-cart-btn-checkout').trigger('click')
+    cy.get('#shipping > .step-title').should('have.text','Shipping Address')
+    })
+
+  it('checkout with current database', () => {
+    cy.visit('')
+    cy.get('#email').type('halotester1@mail.com')
+    cy.get('#pass').type('Halo12345$')
+    cy.get('#send2').click()
+    cy.get('.logo > img').should('be.visible')
+    cy.get('.base').should('have.text','Home Page')
+    cy.get('.showcart').click()
+    cy.get('#top-cart-btn-checkout').trigger('click')
+    cy.get('#shipping > .step-title').should('have.text','Shipping Address')
+    cy.get('.button action continue primary').click()
+  })
+
+  it('checkout with new database', () => {
+    cy.visit('')
+    cy.get('#email').type('halotester1@mail.com')
+    cy.get('#pass').type('Halo12345$')
+    cy.get('#send2').click()
+    cy.get('.logo > img').should('be.visible')
+    cy.get('.base').should('have.text','Home Page')
+    cy.get('.showcart').click()
+    cy.get('#top-cart-btn-checkout').trigger('click')
+    cy.get('#shipping > .step-title').should('have.text','Shipping Address')
+    cy.get('.action action-show-popup').click()
+    cy.get('#HBRA352').should('have.text','HalooArtaArtaArtaArtaArta')
+    cy.get('#X8CRIHV').should('have.text','Tester 1HutapeaHutapeaHutapeaHutapeaHutapea')
+    cy.get('#LR4RBWQ').type('jl mutiara')
+    cy.get('#LR4RBWQ').type('Bandung')
+// yields <option value="456">apples</option>
+    cy.get('CKXRJSK').select('Alaska').should('have.value', '456')})
+})
